@@ -19,5 +19,4 @@ if __name__ == '__main__':
         .reduceByKey(lambda x, y: x + y) \
         .sortBy(lambda x: -x[1]) \
         .take(25)
-
-    count = restaurants.reduceByKey(lambda x, y: x + y).saveAsTextFile("output")
+        .saveAsTextFile("output")
